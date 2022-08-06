@@ -1,0 +1,48 @@
+.cheatsheets.astro-hgKAl8CN{
+    max-width:1080px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(475px,1fr))
+}
+@media screen and (max-width: 800px){
+    .cheatsheets.astro-hgKAl8CN{
+        grid-template-columns:1fr
+    }
+}
+.cheatsheet-container.astro-3WNuNb1f{
+    max-height:300px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center
+}
+.cheatsheet-container.astro-3WNuNb1f a.astro-3WNuNb1f{
+    overflow:hidden;
+    border-bottom:1px solid #fff
+}
+.cheatsheet-container.astro-3WNuNb1f img.astro-3WNuNb1f{
+    transform:translateY(100px);
+    transition:transform .5s;
+    border:5px solid #fff;
+    margin:0 1em
+}
+.cheatsheet-container.astro-3WNuNb1f img.astro-3WNuNb1f:hover{
+    transform:translateY(0)
+}
+.cheatsheet-container.astro-3WNuNb1f h3.astro-3WNuNb1f{
+    font-size:32px;
+    margin-bottom:0;
+    padding-bottom:0
+}
+.cheatsheet-container.astro-3WNuNb1f h4.astro-3WNuNb1f{
+    font-family:"EnterCommand";
+    margin-top:0;
+    font-size:24px;
+    color:#aaa
+}
+@media screen and (max-width: 800px){
+    .cheatsheet-container.astro-3WNuNb1f,.cheatsheet-container.astro-3WNuNb1f img.astro-3WNuNb1f{
+        max-width:300px
+    }
+}

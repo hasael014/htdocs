@@ -1,0 +1,48 @@
+@import url(style.css);
+
+
+
+.contenedor.gratitude{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+}
+
+.tbl.gratitude{
+    font-family: EnterCommand;
+    background-color: rgb(37, 76, 94);
+    text-align: center;
+    width: 20%;
+    border-radius: 15px;
+}
+
+.grati.text{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    font-size: var(--size-texto-normal);
+}
+
+.text.invit{
+    color: aquamarine;
+    background-color: black;
+    font-size: var(--size-texto-normal);
+}
+
+.text.link{
+    text-decoration: none;
+    color: aqua;
+    
+}
+
+.btn.link{
+    background-color: blue;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0.77em;
+}
+
+.btn.link:hover{
+    transform: scale(1.03);
+}

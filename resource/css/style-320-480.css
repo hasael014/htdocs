@@ -1,0 +1,78 @@
+/* Smartphones (portrait & landscape) */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    /*body{
+        font-size: 35px;
+    }*/
+    
+    .encabezado{
+    /*los siguientes 3 lineas son para poner el baner pegado a la pagina*/
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    /*height: 80px;*/
+    margin: var(--title-margin);
+    text-align: center;
+    background: var(--darker-gradient);
+			}
+    
+    .alequivocadotv{
+        font-size: 40px;
+        margin-top: 0;
+        -webkit-text-stroke: 1.1px rgb(/*255*/ 0, /*255*/ 0, /*255*/ 0);
+    }
+    
+    nav.menu{
+        width: 60%;
+        font-size: 20px;
+        //margin: 0 0 0 -60%;
+    }
+    
+    nav.menu::after{
+        content: "|||";
+        color:aqua;
+        background: rgba(0,0,0,1);
+        position: absolute;
+        margin: -197px 0 0 250px;
+        height: auto;
+        width: auto;
+        transform: rotate(-90deg);
+        padding: 10px 5px 10px 5px;
+        border-radius: 0 0 10px 10px;
+    }
+    
+    .title.pru{
+        font-size: 15px;
+        text-shadow: 1px 0 0 #fff,0 1px 0 #fff,-1px 0 0 #fff,0 -1px 0 #fff;
+        margin:  6px 0px 6px;
+        font-family: var(--font-text-phone);
+        
+    }
+    .text.comm{
+        font-size: 20px;
+        font-family: var(--font-text-phone);
+    }
+    .text.comm::placeholder{
+    color: rgb(0, 70, 2);
+			}
+    
+   
+    
+    /*.menu::after{
+    width: 60px;
+    height: 30px;
+    position:absolute;
+    //background-color: black; 
+    background: rgba(0, 0, 0, 0.83);
+    content: "MENU";
+    margin-left: 88px;
+    margin-top: -1.5px;
+    color:blanchedalmond;
+    border-radius: 10px 10px 0 0;
+    transform: rotate(90deg);
+    
+    }*/
+
+
+}

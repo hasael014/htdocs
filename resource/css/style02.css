@@ -1,0 +1,272 @@
+@font-face{
+    font-family:Montserrat;
+    src:url(/assets/fonts/montserrat-vf.woff2) 
+    format("woff2"),url(/assets/fonts/montserrat-vf.woff) 
+    format("woff");
+    font-display:swap
+}
+@font-face{
+    font-family:"Victor Mono";
+    src:url(/assets/fonts/victor-mono.woff2) 
+    format("woff2"),url(/assets/fonts/victor-mono.woff) 
+    format("woff");
+    font-display:swap
+}
+@font-face{
+    font-family:"Victor Mono";
+    font-style:italic;
+    src:url(/assets/fonts/victor-mono-italic.woff2) 
+    format("woff2"),url(/assets/fonts/victor-mono-italic.woff) 
+    format("woff");
+    font-display:swap
+}
+@font-face{
+    font-family:"Bebas Neue";
+    src:url(/assets/fonts/bebas-neue.woff2) 
+    format("woff2"),url(/assets/fonts/bebas-neue.woff) 
+    format("woff");
+    font-display:swap
+}
+@font-face{
+    font-family:"Scope One";
+    src:url(/assets/fonts/scope-one.woff2) 
+    format("woff2"),url(/assets/fonts/scope-one.woff) 
+    format("woff");
+    font-display:swap
+}
+@font-face{
+    font-family:"EnterCommand";
+    src:url(/assets/fonts/entercommand.woff2) 
+    format("woff2"),
+    url(/assets/fonts/entercommand.woff) 
+    format("woff");
+    font-display:swap
+}
+.block.astro-YhwNTh15 
+.astro-YhwNTh15:is(p,li) 
+a{
+    position:relative;
+    display:inline-block;
+    color:var(--color, #ddd);
+    text-decoration:none;
+    transition:transform .5s
+}
+.block.astro-YhwNTh15 
+.astro-YhwNTh15:is(p,li) 
+a:before{
+    position:absolute;
+    content:"";
+    display:inline-block;
+    width:100%;
+    height:100%;
+    background-color:var(--bgcolor, #48a3ee);
+    z-index:-1;
+    padding:0 4px;
+    transform:rotate(-2deg) translate(-4px,-2px);
+    transition:transform .5s
+}
+.block.astro-YhwNTh15 
+.astro-YhwNTh15:is(p,li) 
+a:nth-child(even):before{
+    transform:rotate(2deg) translate(-4px,-2px)
+}
+.block.astro-YhwNTh15 
+.astro-YhwNTh15:is(p,li) 
+a:hover:before{
+    transform:rotate(2deg) translate(-6px,-2px) scale(1.2)
+}
+.block.astro-YhwNTh15 
+.astro-YhwNTh15:is(p,li) 
+a:hover{
+    transform:scale(1.4) rotate(-4deg);
+    z-index:2
+}
+pre.astro-YhwNTh15 code[class.astro-YhwNTh15=language-]{
+    font-family:"Victor Mono",monospace;
+    font-size: 20px;
+    transform:translate(200px)
+}
+pre.astro-YhwNTh15{
+    width:100%;
+    background:linear-gradient(to right,#111 5px,#000 5px 100px,#111 100px);
+    border:2px solid #000;
+    color:#eee;
+    padding:16px;
+    position:relative;
+    overflow:auto
+}
+.button-links.astro-YhwNTh15{
+    --gradient-color: linear-gradient(#0863a5, #1283d1);
+    --lighter-gradient: linear-gradient(to bottom, #fff6, #fff8);
+    --darker-gradient: linear-gradient(to bottom, #0006, #0008);
+    --border-color: #0b5a92;
+    --dark-color: #08477a;
+    display:flex;
+    width:100%;
+    justify-content:space-around
+}
+.button-links.astro-YhwNTh15 
+.astro-YhwNTh15:is(a,span){
+    display:inline-block;
+    padding:5px 8px;
+    font-family:Montserrat,sans-serif;
+    font-size:14px;
+    border:0;
+    border-radius:10px;
+    color:#eee;
+    background:var(--gradient-color);
+    box-shadow:0 7px 0 var(--border-color),0 8px 3px #0000004d;
+    transition:all .25s;
+    text-decoration:none
+}
+.button-links.astro-YhwNTh15 
+span.astro-YhwNTh15{
+    filter:grayscale(1);
+    cursor:not-allowed;
+    opacity:.25
+}
+.button-links.astro-YhwNTh15 
+a.astro-YhwNTh15:active{
+    color:#888;
+    background:var(--darker-gradient),var(--gradient-color);
+    transform:translateY(5px);
+    box-shadow:0 2px 0 var(--border-color),0 3px 3px #0000004d
+}
+body{
+    opacity:0;
+    transition:opacity .5s ease;
+    overflow:hidden
+}
+body.loaded{
+    opacity:1;
+    overflow:auto
+}
+html{
+    scroll-behavior:smooth
+}
+body{
+    margin:0;
+    background:#222
+}
+footer.astro-V2TGWVdc{
+    background:#111;
+    height:125px
+}
+footer.astro-V2TGWVdc 
+.block.astro-V2TGWVdc 
+p.astro-V2TGWVdc 
+a.astro-V2TGWVdc{
+    text-decoration:underline;
+    -webkit-text-decoration-style:wavy;
+    text-decoration-style:wavy;
+    -webkit-text-decoration-color:#337;
+    text-decoration-color:#337;
+    color:#aaa
+}
+footer.astro-V2TGWVdc 
+.block.astro-V2TGWVdc 
+p.astro-V2TGWVdc 
+a.astro-V2TGWVdc:hover{
+    color:red
+}
+.subs-container.astro-UuN8F47Z{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-family:Montserrat;
+    color:#fff;
+    padding:0 1em 1em;
+    background:#222222;
+    max-width:1000px;
+    margin:auto
+}
+p.astro-UuN8F47Z{
+    text-align:center;
+    font-size:17px
+}
+.subs.astro-UuN8F47Z{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:16px 0;
+    max-width:1100px;
+    margin:auto
+}
+.subs[data-open].astro-UuN8F47Z{
+    display:grid;
+    justify-content:flex-start
+}
+data.astro-UuN8F47Z{
+    font-family:Montserrat,sans-serif;
+    font-weight:bold;
+    color:#8a3
+}
+strong.astro-UuN8F47Z{
+    font-family:"Bebas Neue";
+    font-weight:normal;
+    font-size:22px;
+    letter-spacing:0;
+    color:#ccc;
+    display:inline-block;
+    transform:translateY(2px);
+    text-shadow:1px 1px 3px #000;
+    padding:0 2px
+}
+span.astro-UuN8F47Z{
+    font-family:"Scope one";
+    color:#aaa;
+    margin-bottom:8px
+}
+span.astro-UuN8F47Z 
+a.astro-UuN8F47Z{
+    color:#4682b4
+}
+span.astro-UuN8F47Z 
+a.astro-UuN8F47Z:hover{
+    color:#0ff
+}
+a.view.astro-UuN8F47Z{
+    font-family:EnterCommand;
+    font-size:24px;
+    border:2px solid #eeec;
+    background:transparent;
+    color:#ccc;
+    padding:6px 12px;
+    border-radius:10px;
+    margin-top:.75em;
+    cursor:pointer;
+    text-decoration:none;
+    transition:background-position 1s;
+    background-position:100px 0;
+    background:linear-gradient(320deg,#fff1 38%,#fff3 40% 60%,#fff1 62%)
+}
+a.view.astro-UuN8F47Z:hover{
+    background-position:200px 0
+}
+.badge.astro-RPNAPTQg{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    min-width:100px;
+    cursor:pointer
+}
+.group.astro-RPNAPTQg{
+    display:flex;
+    align-items:center
+}
+.badge[data-open].astro-RPNAPTQg{
+    justify-content:center
+}
+.title.astro-RPNAPTQg{
+    font-family:EnterCommand;
+    font-size:26px;
+    color:#fff;
+    text-shadow:2px 0 0 #000,0 2px 0 #000,-2px 0 0 #000,0 -2px 0 #000
+}
+.badge.astro-RPNAPTQg:hover 
+data.astro-RPNAPTQg{
+    transform:translateY(-15px)
+}
+.badge.astro-RPNAPTQg img.astro-RPNAPTQg{width:32px;height:32px;margin:0 10px}data.astro-RPNAPTQg{color:gold;font-size:22px;font-weight:bold;transition:transform .25s;margin-right:8px}.user.astro-mYW52cJp{position:relative;width:43px;text-decoration:none;color:#fff}img.astro-mYW52cJp{width:50px;height:50px;border-radius:50%;border:3px solid #000;background:#000}.tenure.astro-mYW52cJp,.gifts.astro-mYW52cJp:not(:empty){font-family:"EnterCommand";font-size:17px;background:linear-gradient(#ea1ecf,#8b4bed);border-radius:50%;width:16px;height:16px;display:grid;place-items:center;position:absolute;bottom:0;right:-8px;z-index:5}.gifts.astro-mYW52cJp:not(:empty){background:linear-gradient(#0fe10f,#0a4a02);left:2px;top:-2px;bottom:auto;right:auto}.tenure.astro-mYW52cJp:empty{display:none}.user:first-of-type{margin-left:1em}.user:last-of-type{margin-right:1em}.light.astro-fE1kUct4{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;width:100%}a.astro-hdkJeMdK{display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:20px;background:#333;max-height:275px;text-decoration:none}a.astro-hdkJeMdK div.astro-hdkJeMdK{display:flex;flex-direction:column;align-items:center;z-index:5;position:relative;text-shadow:1px 1px 2px #000c}img.astro-hdkJeMdK{width:100%;height:100%;max-height:210px;-o-object-fit:contain;object-fit:contain;transition:transform .5s}a.astro-hdkJeMdK:hover{background:#57326d}a.astro-hdkJeMdK:hover img.astro-hdkJeMdK{filter:drop-shadow(0 0 10px #fff);transform:scale(1.25);transition-duration:.25s}strong.astro-hdkJeMdK{font-family:Montserrat,sans-serif;font-weight:550;letter-spacing:-1px;color:#fff;font-size:18px}data.astro-hdkJeMdK{font-size:18px;display:block}em.astro-hdkJeMdK{font-family:"Scope One",sans-serif;font-size:18px;color:#aaa;text-shadow:1px 1px 2px #000c}.item.astro-tsp5IpMp{display:flex;flex-direction:column;align-items:flex-start;width:330px;min-height:280px;margin-top:10px;position:relative}.item.astro-tsp5IpMp img.astro-tsp5IpMp{width:100%;border:2px solid #000;border-top-width:8px;transition:all .5s;position:relative}.item.astro-tsp5IpMp img.astro-tsp5IpMp:hover{border-color:red;z-index:5}.item.astro-tsp5IpMp h3.astro-tsp5IpMp{font-family:"Bebas Neue",sans-serif;font-weight:normal;font-size:24px;text-shadow:1px 3px 0 #0007;color:#fff;margin:0;display:none}.mini-items{position:absolute;top:-29px;z-index:15;display:flex}.mini-item{font-family:EnterCommand,sans-serif;font-size:22px;display:inline-block;background:#000;color:#fff;text-decoration:none;width:26px;height:23px;margin-right:5px;text-align:center}.mini-item:hover{background:#a00}.button-links.astro-tsp5IpMp{--gradient-color: linear-gradient(#0863a5, #1283d1);--lighter-gradient: linear-gradient(to bottom, #fff6, #fff8);--darker-gradient: linear-gradient(to bottom, #0006, #0008);--border-color: #0b5a92;--dark-color: #08477a;display:flex;width:100%;justify-content:space-around;margin-top:.5em}.button-links.astro-tsp5IpMp .astro-tsp5IpMp:is(a,span){display:inline-block;padding:5px 8px;font-family:Montserrat,sans-serif;font-size:14px;border:0;border-radius:10px;color:#eee;background:var(--gradient-color);box-shadow:0 7px 0 var(--border-color),0 8px 3px #0000004d;transition:all .25s;text-decoration:none}.button-links.astro-tsp5IpMp a.astro-tsp5IpMp:not([href]){filter:grayscale(1);cursor:not-allowed;opacity:.25}.button-links.astro-tsp5IpMp a.astro-tsp5IpMp:active:not([disabled]){color:#888;background:var(--darker-gradient),var(--gradient-color);transform:translateY(5px);box-shadow:0 2px 0 var(--border-color),0 3px 3px #0000004d}.button-links.astro-tsp5IpMp a[disabled].astro-tsp5IpMp:nth-child(2){display:none}.button-links.astro-tsp5IpMp a.astro-tsp5IpMp:not([disabled]):nth-child(2)+a.astro-tsp5IpMp{display:none}

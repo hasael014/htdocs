@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: font-text-01;
+    src: url(/resource/fonts/bebas-neue.woff);
+}
+
+:root{
+    --padding-navbar : 10px;
+    --li-margin-navbar-inline : 20px;
+    --li-margin-navbar-block : 10px;
+    --li-padding-inline: 10px;
+    --li-padding-block:10px;
+}
+
+body{
+    background: #1c1c1c;
+}
+
+nav {
+    margin: 10px;
+    box-shadow:  6px 6px 4px 0px #4c4c4c;
+    background-color: #20262c;
+    padding-block-start: var(--padding-navbar);
+    padding-block-end: var(--padding-navbar);
+    position: sticky;
+    position: -webkit-sticky;
+    border-radius: 10px;
+}
+
+ul{
+    margin-inline-start: 30px;
+}
+
+nav ul a{
+    list-style: none;
+    text-decoration: none;
+    color :aliceblue;
+    display: inline-block;
+    margin-inline-start: 1px;
+    padding-inline-start: var(--li-padding-inline);
+    padding-block-start: var(--li-padding-block);
+    padding-inline-end: var(--li-padding-inline);
+    padding-block-end: var(--li-padding-block);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    border: 10px;
+    border-color: aliceblue;
+    border-width: 10px;
+}
+nav ul a li{
+    margin-inline-start: var(--li-margin-navbar-inline);
+    margin-block-start: var(--li-margin-navbar-block);
+    margin-block-end: var(--li-margin-navbar-block);
+    font-family: font-text-01;
+    text-shadow: 5px 2px 1px red;
+}
+

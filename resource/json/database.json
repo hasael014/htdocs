@@ -1,0 +1,20 @@
+{
+    "barraDeNavegacion" : {
+        "nombredepagina" : [
+            "INICIO",
+            "REDES SOCIALES",
+            "CÓDIGOS",
+            "CURSOS",
+            "DESCARGAS",
+            "HTML"
+        ],
+        "linksdepaginas" : [
+            "/1/",
+            "/2/",
+            "#",
+            "#",
+            "#",
+            "#"
+        ]       
+    }
+}
