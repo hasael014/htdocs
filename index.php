@@ -16,5 +16,7 @@
             break;
     }
 
+    include_once ""
+
     include_once "resource/php/footer.php";
 ?>
