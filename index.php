@@ -16,7 +16,7 @@
             break;
     }
 
-    include_once "https://hasael014.github.io/htdocs/redes_sociales.html";
+    
 
     include_once "resource/php/footer.php";
 ?>
