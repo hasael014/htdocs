@@ -1,5 +1,5 @@
 @import url(fuentes.css);
-@import url(App.css);
+/*@import url(App.css);*/
 
 * {
 	margin: 0;
@@ -7,6 +7,7 @@
 	transition: 0.2s;
 	font-family: fira code, Menlo, Courier;
 	text-overflow: clip;
+	background: #1c1c1c;
 }
 
 h1,
@@ -26,12 +27,17 @@ h6 {
 	--li-padding-inline: 10px;
 	--li-padding-block: 10px;
 	--color-shadow-navbar-text: rgb(0, 170, 255);
+    --border-box :  solid rgb(0, 206, 0) 2px;
+    --color-text : rgb(0,206,0);
 }
 
 body {
-	background: #1c1c1c;
 	line-height: 26px;
 	color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar{
+    width: 0px;
 }
 
 /*
@@ -42,21 +48,19 @@ body {
 
 header {
 	margin: 10px;
-	box-shadow: 6px 6px 4px 0px #189257;
-	background-color: #20262c;
 	padding: 10px 0px;
 	position: -webkit-sticky;
-	border-radius: 10px;
 	z-index: 4;
 	position: sticky;
 	top: 0;
+    border: var(--border-box);
 }
 
-header:hover {
+/*header:hover {
 	transform: scale(0.99);
 	transition: color 0.2s ease-in, box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
 	box-shadow: 0px 0px 4px 0px #189257;
-}
+}*/
 
 header > div > .name-page {
 	margin: 10px 40px;
@@ -94,3 +98,37 @@ header > div > nav > ul > a > li:hover {
 ////////////////////////////////////////////////////////////////////////////////
 */
 
+main{
+    margin: 10px;
+    border: var(--border-box);
+}
+
+main > div{
+    margin: 20px;
+}
+
+main>div>div#subtitulo{
+    margin: 20px;
+}
+
+main>div>div#description{
+    width: 25%;
+}
+
+main>div>div>p{
+    margin: 20px;
+    color: var(--color-text);
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+/////estilos para el archivo footer
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+footer{
+    margin: 10px;
+    border: var(--border-box);
+    position: sticky, -webkit-sticky;
+    top: 0px;
+}
