@@ -3,7 +3,7 @@ function PrintInDisplay(nameid, x) {
 }
 
 async function test_de_obtener_data() {
-	const resp = await fetch('https://api.npoint.io/07fa6344f0d84f53e59b')
+	const resp = await fetch('https://api.npoint.io/f334a0f8addbb676b3ba')
 	const fileJson = await resp.json()
 
 	npestañas = fileJson.barraDeNavegacion.linksdepaginas.length

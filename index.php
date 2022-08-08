@@ -1,7 +1,7 @@
 <?php
 
     $pagina = $_GET['pagina'];
-	include_once "resource/php/heder.php";
+	include_once "./header.html";
 
     switch ($pagina) {
         case '1':
