@@ -27,8 +27,8 @@ h6 {
 	--li-padding-inline: 10px;
 	--li-padding-block: 10px;
 	--color-shadow-navbar-text: rgb(0, 170, 255);
-    --border-box :  solid rgb(0, 206, 0) 2px;
-    --color-text : rgb(0,206,0);
+	--border-box: solid rgb(0, 206, 0) 2px;
+	--color-text: rgb(0, 206, 0);
 }
 
 body {
@@ -36,8 +36,8 @@ body {
 	color: rgb(255, 255, 255);
 }
 
-body::-webkit-scrollbar{
-    width: 0px;
+body::-webkit-scrollbar {
+	width: 0px;
 }
 
 /*
@@ -53,7 +53,7 @@ header {
 	z-index: 4;
 	position: sticky;
 	top: 0;
-    border: var(--border-box);
+	border: var(--border-box);
 }
 
 /*header:hover {
@@ -98,26 +98,56 @@ header > div > nav > ul > a > li:hover {
 ////////////////////////////////////////////////////////////////////////////////
 */
 
-main{
-    margin: 10px;
-    border: var(--border-box);
+main {
+	margin: 10px;
+	border: var(--border-box);
 }
 
-main > div{
-    margin: 20px;
+main > div {
+	margin: 20px;
+	column-count: 2;
+	column-width: 50%;
 }
 
-main>div>div#subtitulo{
-    margin: 20px;
+main > div > div#subtitulo {
+	margin: 20px;
+	column-span: all;
 }
 
-main>div>div#description{
-    width: 25%;
+/*main > div > div#description {
+}*/
+
+main > div > div > p {
+	margin: 20px;
+	color: var(--color-text);
 }
 
-main>div>div>p{
-    margin: 20px;
-    color: var(--color-text);
+/*main>div>div>p>div{
+	background-color:#FFFFFF;
+  width: 100%;
+  height: 300px;
+}*/
+
+#cursoran {
+	width: 3px;
+	height: 20px;
+	background: var(--color-text);
+	position: relative;
+	animation: mymove 1.5s infinite;
+	margin: 20px;
+}
+
+@keyframes mymove {
+	from{
+		background-color: var(--color-text);
+	}
+	to{
+		background-color: transparent;
+	}
+}
+
+main>div>div>img#img-logo{
+	width: 50%;
 }
 
 /*
@@ -126,9 +156,9 @@ main>div>div>p{
 ////////////////////////////////////////////////////////////////////////////////
 */
 
-footer{
-    margin: 10px;
-    border: var(--border-box);
-    position: sticky, -webkit-sticky;
-    top: 0px;
+footer {
+	margin: 10px;
+	border: var(--border-box);
+	position: sticky, -webkit-sticky;
+	top: 0px;
 }
