@@ -133,7 +133,8 @@ main > div > div > p {
 	height: 20px;
 	background: var(--color-text);
 	position: relative;
-	animation: mymove 1.5s infinite;
+	transition: none;
+	animation: mymove 1s infinite;
 	margin: 20px;
 }
 
