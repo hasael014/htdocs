@@ -6,4 +6,4 @@
         </p>
     </section>
 </footer>
-<script src="/resource/js/main.js"></script>
+<!--<script src="/resource/js/main.js"></script>-->
