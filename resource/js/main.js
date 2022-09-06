@@ -18,6 +18,15 @@ async function test_de_obtener_data() {
 	etiqueta += '</ul>'
 
 	PrintInDisplay('navbar', etiqueta)
+
+	/*
+	lo siguiente es para crear los contenedores para los codigos fuente de los proyectos
+	*/
+
+	nlistcod = fileJson.listadecodigos.nombresdecodigos.length
+
+	
+	PrintInDisplay('codigos', eticodigos)
 }
 
 test_de_obtener_data()
