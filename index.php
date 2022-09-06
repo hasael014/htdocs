@@ -1,22 +1,18 @@
 <?php
 
     $pagina = $_GET['pagina'];
-	include_once "./header.html";
+    $name_pages = $_GET['name'];
 
-    switch ($pagina) {
-        case '1':
-            include_once "index.html";
-            break;
-        case '2':
-            include_once "redes_sociales.html";
-            break;
-        
-        default:
-            echo "<script>alert('el sitio que intenta acceder no esta disponible ni existe')</script>";
-            break;
+    if ($pagina != "" & $name_pages != ""){
+
+	    include_once "./header.html";
+
+        echo "<title>Alequivocado.tv | $name_pages</title>";
+        include_once "$name_pages.html";
+
+        include_once "./footer.php";
     }
-
-    
-
-    include_once "resource/php/footer.php";
+    else {
+        echo "<script>window.location.replace('http://127.0.0.1/1/Inicio')</script>";
+    }
 ?>

@@ -4,7 +4,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	transition: 0.2s;
+	transition: 0.9s;
 	font-family: fira code, Menlo, Courier;
 	text-overflow: clip;
 	background: #1c1c1c;
@@ -101,20 +101,21 @@ header > div > nav > ul > a > li:hover {
 main {
 	margin: 10px;
 	border: var(--border-box);
+	height: 700px;
 }
 
 main > div {
-	margin: 20px;
+	margin: 0 20px 20px 20px;
 	column-count: 2;
 	column-width: 50%;
 }
 
-main > div > div#subtitulo {
+/*main > div > div#subtitulo {
 	margin: 20px;
 	column-span: all;
 }
 
-/*main > div > div#description {
+main > div > div#description {
 }*/
 
 main > div > div > p {
@@ -126,29 +127,30 @@ main > div > div > p {
 	background-color:#FFFFFF;
   width: 100%;
   height: 300px;
-}*/
-
-#cursoran {
-	width: 3px;
-	height: 20px;
-	background: var(--color-text);
-	position: relative;
-	transition: none;
-	animation: mymove 1s infinite;
-	margin: 20px;
 }
 
-@keyframes mymove {
+#animation_cursor{
+	display: inline;
+	position: fixed;
+}*/
+
+.cursor_animation {
+	transition: none;
+	animation: cursoranimation 1s infinite;
+	font-weight: 600;
+}
+
+@keyframes cursoranimation {
 	from{
-		background-color: var(--color-text);
+		color: var(--color-text);
 	}
 	to{
-		background-color: transparent;
+		color: transparent;
 	}
 }
 
 main>div>div>img#img-logo{
-	width: 50%;
+	width: 70%;
 }
 
 /*
