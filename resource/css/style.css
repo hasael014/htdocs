@@ -1,22 +1,23 @@
-@import url(fuentes.css);
-/*@import url(App.css);*/
+/*@import url(fuentes.css);
+@import url(App.css);*/
+
+@font-face{
+	font-family: 'consolas';
+    font-style: normal;
+    src: url(/resource/consolas.ttf) format('ttf');
+}
 
 * {
 	margin: 0;
 	padding: 0;
 	transition: 0.9s;
-	font-family: fira code, Menlo, Courier;
+	font-family: 'consolas';
 	text-overflow: clip;
 	background: #1c1c1c;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 400;
+h1,h2,h3,h4,h5,h6 {
+	font: weight 100px;;
 	text-transform: uppercase;
 }
 
@@ -67,6 +68,25 @@ header > div > .name-page {
 	display: inline-block;
 }
 
+header>div>.name-page>h1>span{
+	font-weight:100
+}
+
+header>div>.name-page>h1>span.tv{
+	font-weight: 800;
+	color:rgb(0, 170, 255);
+	animation: textanimationtitle 5s infinite;
+}
+
+@keyframes textanimationtitle {
+	from{
+		color: rgb(0, 170, 255);
+	}
+	to{
+		color: #fff;
+	}
+}
+
 header > div > nav#navbar {
 	display: inline-block;
 }
@@ -101,22 +121,22 @@ header > div > nav > ul > a > li:hover {
 main {
 	margin: 10px;
 	border: var(--border-box);
-	height: 700px;
+	/*height: 700px;*/
+	position: relative;
 }
 
 main > div {
 	margin: 0 20px 20px 20px;
-	column-count: 2;
-	column-width: 50%;
 }
 
 /*main > div > div#subtitulo {
 	margin: 20px;
 	column-span: all;
 }
-
+*/
 main > div > div#description {
-}*/
+	width: 50%;
+}
 
 main > div > div > p {
 	margin: 20px;
@@ -150,7 +170,11 @@ main > div > div > p {
 }
 
 main>div>div>img#img-logo{
-	width: 70%;
+	width: 80%;
+	border-width: 10px;
+	border: var(--border-box);
+	margin: 10px;
+	right: 0px;
 }
 
 /*
@@ -158,6 +182,20 @@ main>div>div>img#img-logo{
 /////estilos para el archivo Codigos.html
 ////////////////////////////////////////////////////////////////////////////////
 */
+
+main>section{
+	width: 100%
+}
+
+main>section>div>div{
+	width: 19%;
+	margin: 3%;
+	display: inline-block;
+}
+
+main>section>div>div>img{
+	width: 90%;
+}
 
 /*
 ////////////////////////////////////////////////////////////////////////////////
@@ -168,6 +206,7 @@ main>div>div>img#img-logo{
 footer {
 	margin: 10px;
 	border: var(--border-box);
-	position: sticky, -webkit-sticky;
-	top: 0px;
+	position: sticky;
+	bottom: 0;
 }
+
