@@ -5,8 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="/resource/css/style.css?<?php echo date('Y-m-d H:i:s');?>" />
-		<script src="/resource/js/main.js"></script>
-		<meta >
+		<script src="/resource/js/main.js?<?php echo date('Y-m-d H:i:s');?>"></script>
+		<link rel="shortcut icon" href="resource/img/ALEQUIVICADOBLANCO.png" type="image/x-icon">
+		<?php echo "<title>Alequivocado.tv | $name_pages</title>";?>
 	</head>
 	<body>
 		<header>

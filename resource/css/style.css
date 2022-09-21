@@ -2,18 +2,23 @@
 @import url(App.css);*/
 
 @font-face{
-	font-family: 'consolas';
-    font-style: normal;
-    src: url(/resource/consolas.ttf) format('ttf');
+	font-family: "PermanentMarker";
+	src:url(/resource/font/Permanent_Marker/PermanentMarker-Regular.ttf)
+}
+
+@font-face {
+	font-family: "consolas";
+	src: url(/resource/font/Inconsolata/static/Inconsolata/Inconsolata-Light.ttf);
 }
 
 * {
 	margin: 0;
 	padding: 0;
-	transition: 0.9s;
+	transition: .5s;
 	font-family: 'consolas';
 	text-overflow: clip;
-	background: #1c1c1c;
+	/*ackground: #1c1c1c;
+	*/
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -35,6 +40,8 @@ h1,h2,h3,h4,h5,h6 {
 body {
 	line-height: 26px;
 	color: rgb(255, 255, 255);
+	display: grid;
+	background: #1c1c1c;
 }
 
 body::-webkit-scrollbar {
@@ -43,52 +50,57 @@ body::-webkit-scrollbar {
 
 /*
 ////////////////////////////////////////////////////////////////////////////////
-/////estilos para la barra de navegacion de la pagina web
+/////estilos para la barra de navegacion
 ////////////////////////////////////////////////////////////////////////////////
 */
 
 header {
-	margin: 10px;
 	padding: 10px 0px;
 	position: -webkit-sticky;
 	z-index: 4;
 	position: sticky;
 	top: 0;
-	border: var(--border-box);
+	/*border: var(--border-box);*/
+
+	background: linear-gradient(#1c1c1c 60%, transparent);
+
 }
 
-/*header:hover {
-	transform: scale(0.99);
-	transition: color 0.2s ease-in, box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
-	box-shadow: 0px 0px 4px 0px #189257;
-}*/
+header > div{
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: repeat(2, auto);
+}
 
 header > div > .name-page {
 	margin: 10px 40px;
-	display: inline-block;
 }
 
 header>div>.name-page>h1>span{
-	font-weight:100
+	font-weight:100;
+	font-family: 'PermanentMarker';
 }
 
 header>div>.name-page>h1>span.tv{
 	font-weight: 800;
-	color:rgb(0, 170, 255);
-	animation: textanimationtitle 5s infinite;
+	animation: textanimationtitle 45s infinite;
 }
 
 @keyframes textanimationtitle {
-	from{
-		color: rgb(0, 170, 255);
+	0%{
+		color: red;
 	}
-	to{
-		color: #fff;
+	50%{
+		color: rgb(0, 255, 0);
+	}
+	100%{
+		color: blue;
 	}
 }
 
 header > div > nav#navbar {
-	display: inline-block;
+	display: grid;
+	justify-content: end;
 }
 
 header > div > nav > ul > a {
@@ -109,7 +121,7 @@ header > div > nav > ul > a > li {
 }
 
 header > div > nav > ul > a > li:hover {
-	border-bottom: solid 1px;
+	border-bottom: solid 2px;
 }
 
 /*
@@ -119,27 +131,29 @@ header > div > nav > ul > a > li:hover {
 */
 
 main {
-	margin: 10px;
-	border: var(--border-box);
+	/*border: var(--border-box);
 	/*height: 700px;*/
 	position: relative;
 }
 
 main > div {
-	margin: 0 20px 20px 20px;
+	margin: 200px 20px 20px 20px;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: repeat(2, 50%);
 }
 
 /*main > div > div#subtitulo {
 	margin: 20px;
 	column-span: all;
 }
-*/
+
 main > div > div#description {
 	width: 50%;
-}
+}*/
 
 main > div > div > p {
-	margin: 20px;
+	margin: 0 20px 20px 20px;
 	color: var(--color-text);
 }
 
@@ -157,7 +171,7 @@ main > div > div > p {
 .cursor_animation {
 	transition: none;
 	animation: cursoranimation 1s infinite;
-	font-weight: 600;
+	font-weight:bolder;
 }
 
 @keyframes cursoranimation {
@@ -169,12 +183,26 @@ main > div > div > p {
 	}
 }
 
+main>div#contenedor_del_indice>div.imlogo{
+	display: grid;
+	place-items: center;
+	height: max-content;
+}
+
 main>div>div>img#img-logo{
-	width: 80%;
 	border-width: 10px;
-	border: var(--border-box);
-	margin: 10px;
-	right: 0px;
+	width:50%;
+	animation: img_animation 5s;
+	top: 50%;
+}
+
+@keyframes img_animation {
+	0%{
+		opacity: 0.2;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 
 /*
@@ -187,10 +215,17 @@ main>section{
 	width: 100%
 }
 
+main>section>div{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	
+}
+
 main>section>div>div{
-	width: 19%;
-	margin: 3%;
-	display: inline-block;
+	display: grid;
+	justify-items: center;
+	gap: 10px;
 }
 
 main>section>div>div>img{
@@ -204,9 +239,32 @@ main>section>div>div>img{
 */
 
 footer {
-	margin: 10px;
-	border: var(--border-box);
-	position: sticky;
-	bottom: 0;
+	/*border: var(--border-box)*/
+	margin-block-start: 80px;
+	padding-block: 30px;
+	display: grid;
+	align-items: end;
+	z-index: 2;
+	box-shadow: 0 -3px 5px 0 black;
 }
 
+footer>section{
+	margin: 10px;
+	margin-inline: 30px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 50%);
+	justify-items: center;
+	align-items: center;
+	gap: 20px;
+}
+footer>section>p>span>a{
+	color : white;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+footer>section>p.contactos-de-suger{
+	grid-column: 2/3;
+	padding-block-end: 20px;
+}
