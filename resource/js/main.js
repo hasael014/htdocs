@@ -2,7 +2,7 @@ function PrintInDisplay(nameid, x) {
 	document.getElementById(nameid).innerHTML = x
 }
 
-async function test_de_obtener_data() {
+async function barra_de_navegacion() {
 	/*const resp = await fetch('https://api.npoint.io/f334a0f8addbb676b3ba')
 	const fileJson = await resp.json()*/
 	const resp = await fetch('https://api.npoint.io/f334a0f8addbb676b3ba/barraDeNavegacion')
@@ -14,8 +14,8 @@ async function test_de_obtener_data() {
 	let i = 0
 
 	for (i = 0; i < npestañas; i++) {
-		etiqueta += "<a href='" + fileJson.linksdepaginas[i] + "'>"
-		etiqueta += '<li>' + fileJson.nombredepagina[i] + '</li></a>'
+		etiqueta += "<li><a href='" + fileJson.linksdepaginas[i] + "'>"
+		etiqueta += fileJson.nombredepagina[i] + '</a></li>'
 	}
 	etiqueta += '</ul>'
 
@@ -23,7 +23,7 @@ async function test_de_obtener_data() {
 
 }
 
-test_de_obtener_data()
+barra_de_navegacion()
 
 async function PaginaDeCodigos(){
 	const resp = await fetch('https://api.npoint.io/f334a0f8addbb676b3ba/listadecodigos')
@@ -78,3 +78,27 @@ async function pagina_inicio(){
 }
 
 pagina_inicio()
+
+async function pagina_video(){
+	const resp = await fetch('https://api.npoint.io/f334a0f8addbb676b3ba/pagina_video')
+	const fileJson = await resp.json()
+
+	let n_link = fileJson.miniatura_video.length, n = 0, contenedor = "<div class='menu_de_videos'>"
+	
+	for(n=0; n<n_link; n++){
+		contenedor += "<form action='/Watch' method='post'><button type='submit' name='name_video' value='"+fileJson.nombre_video[0]+" | GAMEPLAY (NO COMMENTARY) | AL EQUIVOCADO TV {[#"+[n+1]+"]}' class='video_individual'><input type='hidden' value='"
+		contenedor += fileJson.miniatura_video[n]
+		contenedor += "' name='codigovideo''></input><div class='nombre_video'>"
+		contenedor += fileJson.nombre_video[0]
+		contenedor += " | GAMEPLAY (NO COMMENTARY) | AL EQUIVOCADO TV {[#"+[n+1]+"]}</div><div class='clip-miniatura'><img src='http://i3.ytimg.com/vi/"
+		contenedor += fileJson.miniatura_video[n]
+		contenedor += "/maxresdefault.jpg'></div></button></form>"
+	}
+	contenedor += "</div>"
+
+	PrintInDisplay('contenedor_del_menu_de_videos', contenedor)
+}
+
+pagina_video()
+
+

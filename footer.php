@@ -13,7 +13,7 @@
             </span>
         </p>
         <p>
-            Echo por Asael Hernández Bautista
+            Echo por <span class="bold-text-name">A</span>sael <span class="bold-text-name">H</span>ernández <span class="bold-text-name">B</span>autista
         </p>
         
         <p class="contactos-de-suger">

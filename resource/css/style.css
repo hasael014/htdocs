@@ -34,14 +34,15 @@ h1,h2,h3,h4,h5,h6 {
 	--li-padding-block: 10px;
 	--color-shadow-navbar-text: rgb(0, 170, 255);
 	--border-box: solid rgb(0, 206, 0) 2px;
-	--color-text: rgb(0, 206, 0);
+	--color-text: rgb(3, 185, 0);
+	--background-page: #1c1c1c;
 }
 
 body {
 	line-height: 26px;
 	color: rgb(255, 255, 255);
 	display: grid;
-	background: #1c1c1c;
+	background: var(--background-page);
 }
 
 body::-webkit-scrollbar {
@@ -62,7 +63,7 @@ header {
 	top: 0;
 	/*border: var(--border-box);*/
 
-	background: linear-gradient(#1c1c1c 60%, transparent);
+	background: linear-gradient(var(--background-page),transparent);
 
 }
 
@@ -98,35 +99,45 @@ header>div>.name-page>h1>span.tv{
 	}
 }
 
-header > div > nav#navbar {
+header > div > nav {
 	display: grid;
 	justify-content: end;
+	margin-inline-end: 2%;
 }
 
-header > div > nav > ul > a {
+header > div > nav> ul{
+	display: flex;
+	align-items: center;
+}
+
+header > div > nav > ul > li {
 	list-style: none;
-	text-decoration: none;
-	color: rgb(3, 185, 0);
 	display: inline-block;
+}
+
+header > div> nav > ul> li:hover{
+	transform: scale(1.2);
+	font-weight: 900;
+	transition: 100ms;
+}
+
+header > div > nav > ul > li > a {
+	color: var(--color-text);
 	margin: 0px 5px;
 	padding: 10px;
 	font-size: 1.5em;
-	border: 10px;
-	border-color: aliceblue;
-	border-width: 10px;
-}
-header > div > nav > ul > a > li {
-	margin: 0px 5px;
-	font-weight: 500;
+	text-decoration: none;
 }
 
-header > div > nav > ul > a > li:hover {
-	border-bottom: solid 2px;
+header > div > nav > ul > li > a:hover {
+	text-decoration:underline;
 }
+
+
 
 /*
 ////////////////////////////////////////////////////////////////////////////////
-/////Estilos para la pagina principal llamado inicio
+/////Estilos para la pagina principal /inicio
 ////////////////////////////////////////////////////////////////////////////////
 */
 
@@ -134,9 +145,11 @@ main {
 	/*border: var(--border-box);
 	/*height: 700px;*/
 	position: relative;
+	display: grid;
+	justify-items: center;
 }
 
-main > div {
+main > #contenedor_del_indice {
 	margin: 200px 20px 20px 20px;
 	display: grid;
 	grid-template-rows: 100%;
@@ -207,6 +220,63 @@ main>div>div>img#img-logo{
 
 /*
 ////////////////////////////////////////////////////////////////////////////////
+/////estilos para el archivo Videos.html
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+main>#contenedor_del_menu_de_videos{
+	margin: 1%;
+	padding: 0;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos{
+	width: 100%;
+	margin: 0;
+	padding: 0;display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1.5%;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form{
+	width: 100%;
+	
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button{
+	width: 100%;
+	background: transparent;
+	border: none;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button:hover{
+	transform: scale(1.1);
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button{
+	color: whitesmoke;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>.nombre_video{
+	margin-block-end: 4%;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>div.clip-miniatura{
+	width: 100%;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>div.clip-miniatura>img{
+	width: 100%;
+	height: 200px;
+	object-fit:cover;
+	object-position: 25% 0%;/*
+	border: 5px solid black;*/
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
 /////estilos para el archivo Codigos.html
 ////////////////////////////////////////////////////////////////////////////////
 */
@@ -242,10 +312,10 @@ footer {
 	/*border: var(--border-box)*/
 	margin-block-start: 80px;
 	padding-block: 30px;
-	display: grid;
-	align-items: end;
+	display: grid;/*
+	align-items: end;*/
 	z-index: 2;
-	box-shadow: 0 -3px 5px 0 black;
+	box-shadow: 0 10px 0px 0 var(--background-page), 0 -3px 3px black;
 }
 
 footer>section{
@@ -253,15 +323,19 @@ footer>section{
 	margin-inline: 30px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 50%);
+	grid-template-rows: repeat(2, 1fr);
 	justify-items: center;
 	align-items: center;
-	gap: 20px;
 }
+
 footer>section>p>span>a{
 	color : white;
 	text-decoration: none;
-	font-weight:bold;
+	font-weight: 900;
+}
+
+footer>section>p>span.bold-text-name{
+	font-weight: 900;
 }
 
 footer>section>p.contactos-de-suger{

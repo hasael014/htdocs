@@ -1,3 +1,6 @@
+<?php
+$name_videos = $_POST['name_video'];
+?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -7,12 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="/resource/css/style.css?<?php echo date('Y-m-d H:i:s');?>" />
 		<link rel="shortcut icon" href="resource/img/ALEQUIVICADOBLANCO.png" type="image/x-icon">
 		<?php
-		if($name_pages == "Watch"){
-			$name_videos = $_POST['name_video'];
+			
 			echo "<title>$name_videos</title>";
-		}else{
-		echo "<title>Alequivocado.tv | $name_pages</title>";
-		}
 		?>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 		<script src="/resource/js/main.js?<?php echo date('Y-m-d H:i:s');?>"></script>
@@ -27,3 +26,8 @@
 			</div>
 		</header>
         <main>
+<?php
+$codigo_video = $_POST['codigovideo'];
+
+echo "<iframe width='1500' height='676' src='https://www.youtube.com/embed/".$codigo_video."' title='".$name_videos."' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+?>
