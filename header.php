@@ -14,10 +14,10 @@
 		echo "<title>Alequivocado.tv | $name_pages</title>";
 		}
 		?>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 		<script src="/resource/js/main.js?<?php echo date('Y-m-d H:i:s');?>"></script>
 	</head>
 	<body>
+        <main>
 		<header>
 			<div>
 				<div class="name-page">
@@ -26,4 +26,3 @@
 				<nav id="navbar"></nav>
 			</div>
 		</header>
-        <main>

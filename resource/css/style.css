@@ -22,7 +22,7 @@
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font: weight 100px;;
+	font: weight 100px;
 	text-transform: uppercase;
 }
 
@@ -43,6 +43,8 @@ body {
 	color: rgb(255, 255, 255);
 	display: grid;
 	background: var(--background-page);
+	height:auto;
+	justify-items: center;
 }
 
 body::-webkit-scrollbar {
@@ -62,7 +64,7 @@ header {
 	position: sticky;
 	top: 0;
 	/*border: var(--border-box);*/
-
+	width: 100%;
 	background: linear-gradient(var(--background-page),transparent);
 
 }
@@ -147,6 +149,7 @@ main {
 	position: relative;
 	display: grid;
 	justify-items: center;
+	max-width: 1300px;
 }
 
 main > #contenedor_del_indice {
@@ -224,6 +227,32 @@ main>div>div>img#img-logo{
 ////////////////////////////////////////////////////////////////////////////////
 */
 
+main>div#paginas{
+	width: 100%;
+}
+
+main>div#paginas>div.indice_de_paginas_de_videos{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+main>div#paginas>div.indice_de_paginas_de_videos>a{
+	color: white;
+	text-decoration: none;
+	margin: 1px;
+}
+
+main>div#paginas>div.indice_de_paginas_de_videos>a>p{
+	font-size: 1.1em;
+	padding: 7px;
+	border-radius: 5px;
+}
+
+main>div#paginas>div.indice_de_paginas_de_videos>a:hover{
+	transform: scale(1.1);
+}
+
 main>#contenedor_del_menu_de_videos{
 	margin: 1%;
 	padding: 0;
@@ -234,12 +263,12 @@ main>#contenedor_del_menu_de_videos>.menu_de_videos{
 	margin: 0;
 	padding: 0;display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	gap: 1.5%;
+	gap: 2%;
 }
 
 main>#contenedor_del_menu_de_videos>.menu_de_videos>form{
 	width: 100%;
-	
+	position: relative;
 }
 
 main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button{
@@ -250,6 +279,7 @@ main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button{
 
 main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button:hover{
 	transform: scale(1.1);
+	cursor: pointer;
 }
 
 main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button{
@@ -269,10 +299,21 @@ main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>div.clip-miniatu
 
 main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>div.clip-miniatura>img{
 	width: 100%;
-	height: 200px;
-	object-fit:cover;
-	object-position: 25% 0%;/*
-	border: 5px solid black;*/
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+///// Estilos para la pagina de watch.html
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+main>iframe{
+	max-width: 90%;
+	min-height: 676;
+}
+
+main>h2{
+	margin-block: 2%;
 }
 
 /*
@@ -282,12 +323,13 @@ main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>div.clip-miniatu
 */
 
 main>section{
-	width: 100%
+	margin: 1%;
+	padding: 0;
 }
 
 main>section>div{
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(5, 1fr);
 	gap: 10px;
 	
 }

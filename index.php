@@ -10,7 +10,14 @@
         include_once "$name_pages.php";
 
         include_once "footer.php";
-        }else{
+        }/*
+        if($name_pages == "Videos"){
+
+            include_once "header.php";
+
+            include_once "$name_pages.php";
+
+        }*/else{
 
 	    include_once "header.php";
         
