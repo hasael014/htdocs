@@ -1,29 +1,3 @@
-<script>
-			async function barra_de_navegacion() {
-	/*const resp = await fetch('https://api.npoint.io/f334a0f8addbb676b3ba')
-	const fileJson = await resp.json()*/
-	const resp = await fetch('https://api.npoint.io/f334a0f8addbb676b3ba/barraDeNavegacion')
-	const fileJson = await resp.json()
-
-	npestañas = fileJson.linksdepaginas.length
-
-	let etiqueta = '<ul>'
-	let i = 0
-
-	for (i = 0; i < npestañas; i++) {
-		etiqueta += "<li><a href='" + fileJson.linksdepaginas[i] + "'>"
-		etiqueta += fileJson.nombredepagina[i] + '</a></li>'
-	}
-	etiqueta += '</ul>'
-
-				const { PrintInDisplay } = await import('./resource/js/funciones-globales.js')
-				PrintInDisplay('navbar', etiqueta)
-
-			}
-
-			barra_de_navegacion()
-		</script>
-
 <footer>
     <section>
         <p>
@@ -43,6 +17,13 @@
         
         <p class="contactos-de-suger">
             Si tienes alguna sugerencia que creas que puede aportar al proyecto puedes contactarme al este correo unpocode00@gmail.com, estaré muy agradecido con tu feedback para continuar mejorando.
+        </p>
+
+        <p class="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//alequivocadotv.atwebpages.com/" target="_blank">Share on Facebook</a>
+        <a href="https://twitter.com/intent/tweet?text=http%3A//alequivocadotv.atwebpages.com/" target="_blank">Share on Twitter</a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//alequivocadotv.atwebpages.com/" target="_blank">Share on LinkedIn</a>
+        <a href="mailto:http://alequivocadotv.atwebpages.com/?" target="_blank">Send Email</a>
         </p>
     </section>
 </footer>

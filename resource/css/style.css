@@ -240,17 +240,19 @@ main>div#paginas>div.indice_de_paginas_de_videos{
 main>div#paginas>div.indice_de_paginas_de_videos>a{
 	color: white;
 	text-decoration: none;
-	margin: 1px;
+	margin: 0 4px 0 4px;
+	width: 32px;
+	height: 48px;
 }
 
 main>div#paginas>div.indice_de_paginas_de_videos>a>p{
-	font-size: 1.1em;
-	padding: 7px;
+	font-size: 14px;
 	border-radius: 5px;
+	text-align: center;
 }
 
 main>div#paginas>div.indice_de_paginas_de_videos>a:hover{
-	transform: scale(1.1);
+	transform: scale(1.2);
 }
 
 main>#contenedor_del_menu_de_videos{
@@ -261,7 +263,8 @@ main>#contenedor_del_menu_de_videos{
 main>#contenedor_del_menu_de_videos>.menu_de_videos{
 	width: 100%;
 	margin: 0;
-	padding: 0;display: grid;
+	padding: 0;
+	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 2%;
 }

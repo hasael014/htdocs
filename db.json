@@ -1,0 +1,101 @@
+{
+  "navbar": [
+    
+  ],
+  "listadecodigos": {
+    "nombresdecodigos": [
+      "próximamente"
+    ],
+    "imagendelcodigo": [
+      "/resource/img/oxido-metal.png",
+      "/resource/img/oxido-metal.png",
+      "/resource/img/oxido-metal.png",
+      "/resource/img/oxido-metal.png",
+      "/resource/img/oxido-metal.png"
+    ],
+    "linksdecodigos": [
+      "https://www.github.com/hasael014",
+      "https://www.github.com/hasael014",
+      "https://www.github.com/hasael014",
+      "https://www.github.com/hasael014",
+      "https://www.github.com/hasael014"
+    ]
+  },
+  "texto_inicio": {
+    "texto": [
+      "<p></p>",
+      "<p></p>",
+      "<p></p>",
+      "<p><span class='cursor_animation'>|</span></p>",
+      ""
+    ]
+  },
+  "pagina_video": {
+    "nombre_video": [
+        "TRUCKERS OF EUROPE 3",
+        "TRUCKERS OF EUROPE 3",
+        "TRUCKERS OF EUROPE 3",
+        "TRUCKERS OF EUROPE 3",
+        "TRUCKERS OF EUROPE 3",
+        "TRUCKERS OF EUROPE 3",
+        "TRUCKERS OF EUROPE 3",
+        "TRUCKERS OF EUROPE 3",
+        "TRUCKERS OF EUROPE 3",
+        "TRUCK SIMULATOR: EUROPE 2",
+        "WORLD BUS DRIVIN SIMULATOR",
+        "WORLD BUS DRIVIN SIMULATOR",
+        "WORLD BUS DRIVIN SIMULATOR",
+        "TRUCK SIMULATOR 2018: EUROPE",
+        "TRUCK SIMULATOR 2018: EUROPE",
+        "TRUCK SIMULATOR 2018: EUROPE",
+        "TRUCK SIMULATOR 2018: EUROPE",
+        "TRUCK SIMULATOR 2018: EUROPE",
+        "WORLD TRUCK DRIVING SIMULATOR",
+        "WORLD TRUCK DRIVING SIMULATOR",
+        "WORLD TRUCK DRIVING SIMULATOR",
+        "TRUCK SIMULATOR 2018: EUROPE",
+        "WORLD BUS DRIVIN SIMULATOR",
+        "WORLD BUS DRIVIN SIMULATOR",
+        "WORLD BUS DRIVIN SIMULATOR",
+        "WORLD BUS DRIVIN SIMULATOR",
+        "WORLD BUS DRIVIN SIMULATOR",
+        "WORLD BUS DRIVIN SIMULATOR",
+        "TRUCK SIMULATOR 2018: EUROPE",
+        "PUBLIC TRANSPORT SIMULATOR-COACH",
+        "TRUCK SIMULATOR 2018: EUROPE"
+      ],
+    "miniatura_video": [
+      "6QLpkPDspdE",
+      "eZyKwp1h-aU",
+      "wcX3IlgNCn8",
+      "5wynmh-E00M",
+      "fCrB4j287E0",
+      "whXhcyHm7mo",
+      "YD2VHhxYdYg",
+      "JXUMsXBmgQ4",
+      "eZL4fDazxdg",
+      "7wq9ge4tTHc",
+      "UafbfxGm32g",
+      "rDbqmpPaM2w",
+      "gBTO_NaFG78",
+      "58c2K76d3ck",
+      "hmCogdCSEMY",
+      "GJMXy83awJU",
+      "XZ3s0LAkVhA",
+      "LDXCQziZQVM",
+      "mWEvpzlRxv0",
+      "8wDtx7eMiEg",
+      "7lt4-llfhyE",
+      "Kbe_cMHUULE",
+      "KaByMta49sc",
+      "-Oa9QU9JPMA",
+      "felUi7j6vp0",
+      "N_bulSHiA7g",
+      "91b3S4JY4T4",
+      "ZaY2J8m8gtQ",
+      "ESDaV0z8TTM",
+      "VTdTsrIjsT4",
+      "iq69zHcu1Io"
+      ]
+  }
+}

@@ -1,3 +1,9 @@
+
+<?php 
+include_once "conection_database.php";
+//include_once "resource/php/navbar.php";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -13,6 +19,7 @@
 		}else{
 		echo "<title>Alequivocado.tv | $name_pages</title>";
 		}
+		//$database = file_get_contents(__DIR__."/resource/JSON/$name_pages.json");
 		?>
 		<script src="/resource/js/main.js?<?php echo date('Y-m-d H:i:s');?>"></script>
 	</head>
@@ -23,6 +30,14 @@
 				<div class="name-page">
 					<h1><span>alequivocado</span><span class="tv">.TV</span></h1>
 				</div>
-				<nav id="navbar"></nav>
+				<nav id="navbar">
+					<?php 
+					$database = file_get_contents("resource/JSON/navbar.json");
+					include_once "resource/php/navbar.php";
+					?>
+				</nav>
 			</div>
 		</header>
+		<?php
+			$database = file_get_contents(__DIR__."/resource/JSON/$name_pages.json");
+		?>
