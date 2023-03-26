@@ -1,7 +1,7 @@
 <footer>
     <section>
         <p>
-            alequivocadotv.atwebpages.com &copy 2022
+            alequivocadotv.atwebpages.com &copy 2022 - 2023
         </p>
         <p>
             Código en 

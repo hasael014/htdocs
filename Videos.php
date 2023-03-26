@@ -10,59 +10,16 @@ echo "<style>
 </style>";
 ?>
 
-
 <div id="paginas">
+<?php
+include_once "resource/php/paginas_menu.php";
+?>
 </div>
 <div id="contenedor_del_menu_de_videos">
+	<?php
+	include_once "resource/php/Videos.php";
+	?>
 </div>
-
-
-<script>
-
-    async function pagina_video(){
-	const resp = await fetch('https://api.npoint.io/f334a0f8addbb676b3ba/pagina_video')
-	const fileJson = await resp.json()
-
-	let n_link = fileJson.miniatura_video.length, n = <?php echo$ab;?>0-10, contenedor = "<div class='menu_de_videos'>"
-	
-	for(n; n< <?php echo$ab;?>0; n++){
-		if(n < n_link){
-		contenedor += "<form action='/Watch' method='post'><button type='submit' name='name_video' value='"+fileJson.nombre_video[0]+" | GAMEPLAY (NO COMMENTARY) | AL EQUIVOCADO TV {[#"+ (n_link-n) +"]}' class='video_individual'><input type='hidden' value='"
-		contenedor += fileJson.miniatura_video[n]
-		contenedor += "' name='codigovideo''></input><div class='nombre_video'>"
-		contenedor += fileJson.nombre_video[n]
-		contenedor += " | GAMEPLAY (NO COMMENTARY) | AL EQUIVOCADO TV {[#0"+[n_link-n]+"]}</div><div class='clip-miniatura'><img src='http://i3.ytimg.com/vi/"
-		contenedor += fileJson.miniatura_video[n]
-		contenedor += "/maxresdefault.jpg'></div></button></form>"
-		}
-		else{
-			contenedor += ""
-		}
-	}
-	contenedor += "</div>"
-
-	PrintInDisplay('contenedor_del_menu_de_videos', contenedor)
-
-
-    let paginas = n_link / 10
-
-    
-    let indice_de_paginas_de_videos = "<div  class='indice_de_paginas_de_videos'>"
-
-    for(let nnn = 1; nnn<paginas+1; nnn++){
-
-        indice_de_paginas_de_videos += "<a href='/Videos/"+nnn+"'><p id='ln"+nnn+"' >"+nnn+"</p></a>"
-    }
-
-    indice_de_paginas_de_videos += "</div>"
-
-    PrintInDisplay('paginas',indice_de_paginas_de_videos)
-
-}
-
-pagina_video()
-
-</script>
 <?php
 }
 else{

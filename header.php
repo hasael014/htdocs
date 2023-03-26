@@ -1,8 +1,4 @@
 
-<?php 
-include_once "conection_database.php";
-//include_once "resource/php/navbar.php";
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -17,7 +13,7 @@ include_once "conection_database.php";
 			$name_videos = $_POST['name_video'];
 			echo "<title>$name_videos</title>";
 		}else{
-		echo "<title>Alequivocado.tv | $name_pages</title>";
+		echo "<title>$name_pages | Alequivocado.tv</title>";
 		}
 		//$database = file_get_contents(__DIR__."/resource/JSON/$name_pages.json");
 		?>

@@ -1,0 +1,66 @@
+[
+    {
+        "periodo" : "hora",
+        "porcentaje": 24
+    },
+    {
+        "periodo" : "Dia",
+        "porcentaje": 1
+    },
+    {
+        "periodo" : "Semana",
+        "porcentaje": 7
+    },
+    {
+        "periodo" : "Quincena",
+        "porcentaje": 15
+    },
+    {
+        "periodo" : "Mes",
+        "porcentaje": 30
+    },
+    {
+        "periodo" : "2 Meses",
+        "porcentaje": 60
+    },
+    {
+        "periodo" : "3 Meses",
+        "porcentaje": 90
+    },
+    {
+        "periodo" : "4 meses",
+        "porcentaje": 120
+    },
+    {
+        "periodo" : "5 meses",
+        "porcentaje": 150
+    },
+    {
+        "periodo" : "6 meses",
+        "porcentaje": 180
+    },
+    {
+        "periodo" : "7 meses",
+        "porcentaje": 210
+    },
+    {
+        "periodo" : "8 meses",
+        "porcentaje": 240
+    },
+    {
+        "periodo" : "9 meses",
+        "porcentaje": 270
+    },
+    {
+        "periodo" : "10 meses",
+        "porcentaje": 300
+    },
+    {
+        "periodo" : "11 meses",
+        "porcentaje": 330
+    },
+    {
+        "periodo" : "1 año",
+        "porcentaje": 365
+    }
+]

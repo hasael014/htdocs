@@ -1,5 +1,5 @@
 /*@import url(fuentes.css);
-@import url(App.css);*/
+@import url(App.css);
 
 @font-face{
 	font-family: "PermanentMarker";
@@ -10,12 +10,12 @@
 	font-family: "consolas";
 	src: url(/resource/font/Inconsolata/static/Inconsolata/Inconsolata-Light.ttf);
 }
-
+*/
 * {
 	margin: 0;
 	padding: 0;
 	transition: .5s;
-	font-family: 'consolas';
+	/*font-family: 'consolas';*/
 	text-overflow: clip;
 	/*ackground: #1c1c1c;
 	*/
@@ -310,6 +310,10 @@ main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>div.clip-miniatu
 ////////////////////////////////////////////////////////////////////////////////
 */
 
+span>#Download{
+	transform: rotate(90deg);
+}
+
 main>iframe{
 	max-width: 90%;
 	min-height: 676;
@@ -359,7 +363,7 @@ footer {
 	padding-block: 30px;
 	display: grid;/*
 	align-items: end;*/
-	z-index: 2;
+	z-index: 20;
 	box-shadow: 0 10px 0px 0 var(--background-page), 0 -3px 3px black;
 }
 
@@ -386,4 +390,80 @@ footer>section>p>span.bold-text-name{
 footer>section>p.contactos-de-suger{
 	grid-column: 2/3;
 	padding-block-end: 20px;
+}
+
+
+
+
+.contenedor-tablas{
+    display: grid;
+	grid-template-columns: repeat(2, auto);
+	margin-block-end: 1%;
+}
+  
+.fomrgenerador{
+    display: grid;
+	grid-template-columns: repeat(2, auto);
+}
+
+.tabla-de-calculos{
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	width: 100%
+}
+
+legend{
+	margin-inline-start: 10%;
+	background-color: var(--color-text);
+	padding-inline: 1%;
+	border-radius: 10px;
+}
+
+.tabla{
+	width: 100%;
+}
+
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+/////lo siguiente es para los moviles
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    header>div{
+		grid-template-columns: 1fr;
+		justify-content: center;
+		text-align: center;
+	}
+	
+	header>div>.name-page{
+		margin: 10px;
+	}
+
+	header>div>.name-page>h1>span{
+        font-size: .8em;
+    }
+
+	header>div>nav{
+		justify-content: center;
+		grid-template-columns: 1fr, 1fr, 1fr;
+	}
+
+	main{
+		min-width: 320px;
+	}
+
+	main>#contenedor_del_indice{
+		margin: 9% .5% .5% .5%;
+		grid-template-columns: 1fr;
+		grid-template-rows: none;
+	}
+
+	main>div>div>p{
+		font-size: .9em;
+		min-width: 320px;
+	}
 }
