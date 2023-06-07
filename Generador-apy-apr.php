@@ -37,14 +37,15 @@ $datosdejson = json_decode($database, true);
             <?php 
             
             if(isset($_GET['APR']) and isset($_GET['inversion'])){
-                datostabla(anumero($_GET['APR']), $datosdejson);
+                datostabla(anumero($_GET['APR']), $datosdejson, anumero($_GET['inversion']));
             }elseif(!isset($_GET['APR']) and isset($_GET['inversion'])){
                 if(isset($_GET['APY'])){
-                    datostabla(GENERADOR_APR($_GET['APY']), $datosdejson);
-                }else{
-                    datostabla(0, $datosdejson);
+                    datostabla(GENERADOR_APR($_GET['APY']), $datosdejson, anumero($_GET['inversion']));
                 }
             }
+            elseif(!isset($_GET['APR']) and !isset($_GET['inversion'])){
+                    datostabla(0, $datosdejson, 0);
+                }
 
             ?>
 
@@ -65,14 +66,20 @@ $datosdejson = json_decode($database, true);
 <?php 
 
 if(isset($_GET['APY']) and isset($_GET['inversion'])){
-    datostabla(anumero($_GET['APY']), $datosdejson);
-}elseif(!isset($_GET['APY']) and isset($_GET['inversion'])){
-    if(isset($_GET['APR'])){
-        datostabla(GENERADOR_APR($_GET['APR']), $datosdejson);
-    }else{
-        datostabla(0, $datosdejson);
-    }
+    datostabla(anumero($_GET['APY']), $datosdejson, anumero($_GET['inversion']));
 }
+elseif(!isset($_GET['APY']) and isset($_GET['inversion'])){
+    if(isset($_GET['APR'])!==""){
+        datostabla(GENERADOR_APY($_GET['APR']), $datosdejson, anumero($_GET['inversion']));
+    }
+    else{
+        datostabla(0, $datosdejson, 0);
+    }
+    
+}
+elseif(!isset($_GET['APY']) or !isset($_GET['inversion'])){
+        datostabla(0, $datosdejson, 0);
+    }
 
 ?>
 </table>
@@ -114,19 +121,19 @@ function anumero($variable1){
 }
 
 
-function datostabla($variable0, $datosdejson){
+function datostabla($variable0, $datosdejson, $inversion){
 
     $tb = count($datosdejson);
     
     $Dia = $variable0/365;
     
     for($n = 0; $n < $tb; $n++){
-        $porcentaje1 = round($Dia/$datosdejson[$n]['porcentaje'], 3);
-        $porcentaje2 = round($Dia*$datosdejson[$n]['porcentaje'], 3);
-        $ganancias1 = round(($porcentaje1*anumero($_GET['inversion']))/100, 2);
-        $ganancias2 = round(($porcentaje2*anumero($_GET['inversion']))/100, 2);
-        $total1 = $ganancias1+anumero($_GET['inversion']);
-        $total2 = $ganancias2+anumero($_GET['inversion']);
+        $porcentaje1 = round($Dia/$datosdejson[$n]['porcentaje'], 4);
+        $porcentaje2 = round($Dia*$datosdejson[$n]['porcentaje'], 4);
+        $ganancias1 = round(($porcentaje1*$inversion)/100, 2);
+        $ganancias2 = round(($porcentaje2*$inversion)/100, 2);
+        $total1 = $ganancias1+$inversion;
+        $total2 = $ganancias2+$inversion;
         echo "
         <tr>
             <th>".$datosdejson[$n]['periodo']."</th>

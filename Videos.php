@@ -3,11 +3,6 @@
 $ab = $_GET['ab'];
 
 if($ab != ""){
-echo "<style>
-    #ln".$ab."{
-        background: #19410d;
-    }
-</style>";
 ?>
 
 <div id="paginas">

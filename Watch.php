@@ -1,7 +1,7 @@
 <?php
 $name_videos = $_POST['name_video'];
 ?>
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
@@ -23,7 +23,7 @@ $name_videos = $_POST['name_video'];
 				</div>
 				<nav id="navbar"></nav>
 			</div>
-		</header>
+		</header>-->
         <main>
 <?php
 $codigo_video = $_POST['codigovideo'];

@@ -1,18 +1,14 @@
 [
     {
-        "nombre": "ithem",
+        "nombre": "Inicio",
         "url": "/Inicio"
     },
     {
-        "nombre": "ithem",
+        "nombre": "Videos",
         "url": "/Videos/1"
     },
     {
-        "nombre": "ithem",
-        "url": "/Codigos/1"
-    },
-    {
-        "nombre": "ithem",
+        "nombre": "Herramientas",
         "url":"/Generador-apy-apr"
     }
 ]

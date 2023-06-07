@@ -1,0 +1,478 @@
+/*@import url(fuentes.css);
+@import url(App.css);
+
+@font-face{
+	font-family: "PermanentMarker";
+	src:url(/resource/font/Permanent_Marker/PermanentMarker-Regular.ttf)
+}
+
+@font-face {
+	font-family: "consolas";
+	src: url(/resource/font/Inconsolata/static/Inconsolata/Inconsolata-Light.ttf);
+}
+*/
+* {
+	margin: 0;
+	padding: 0;
+	transition: .5s;
+	/*font-family: 'consolas';*/
+	text-overflow: clip;
+	/*ackground: #1c1c1c;
+	*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font: weight 100px;
+	text-transform: uppercase;
+}
+
+:root {
+	--padding-navbar: 10px;
+	--li-margin-navbar-inline: 20px;
+	--li-margin-navbar-block: 10px;
+	--li-padding-inline: 10px;
+	--li-padding-block: 10px;
+	--color-ui: rgb(0, 170, 255);
+	--border-box: solid rgb(0, 206, 0) 2px;
+	--color-text: #019fb6;
+	--background-page: #1c1c1c;
+}
+
+body {
+	line-height: 26px;
+	color: rgb(255, 255, 255);
+	display: grid;
+	background: var(--background-page);
+	height: auto;
+	justify-items: center;
+}
+
+body::-webkit-scrollbar {
+	width: 0px;
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+/////estilos para la barra de navegacion
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+header {
+	padding: 10px 0px;
+	position: -webkit-sticky;
+	z-index: 4;
+	top: 0;
+	width: 100%;
+	background: linear-gradient(var(--background-page), transparent);
+	display: flex;
+	flex-flow: column wrap;
+    align-items: center;
+    row-gap: 20px;
+}
+
+header > h1{
+	margin-inline-start: 2%;
+}
+
+header > nav {
+	margin-block-end: 2%;
+}
+
+header > nav> ul{
+	display: flex;
+	align-items: end;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+header > nav > ul > li {
+	list-style: none;
+}
+
+.nav_link {
+	text-decoration: none;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	letter-spacing: 2px;
+	line-height: 16px;
+	font-weight: 700;
+	color: #fff;
+	font-size: 1.5em;
+}
+
+.nav_link::after {
+	display: block;
+	content: "";
+	border-bottom: solid 3px var(--color-text);
+	transform: scaleX(0);
+	transition: transform 250ms ease-in-out;
+}
+
+.nav_link:hover::after {
+	transform: scale(1);
+}
+
+header>div>nav>ul>li>a:hover {
+	text-decoration: underline;
+}
+
+header>div>nav>ul>li>a:active {
+	background-color: green;
+}
+
+
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+/////Estilos para la pagina principal /inicio
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+main {
+	display: grid;
+	justify-items: center;
+	max-width: 640px;
+    gap: 10px;
+}
+
+main>div>div>p {
+	margin: 0 20px 20px 20px;
+	color: var(--color-text);
+}
+
+.cursor_animation {
+	transition: none;
+	animation: cursoranimation 1s infinite;
+	font-weight: bolder;
+}
+
+@keyframes cursoranimation {
+	from {
+		color: var(--color-text);
+	}
+
+	to {
+		color: transparent;
+	}
+}
+
+main>div#contenedor_del_indice>div.imlogo {
+	display: flex;
+    justify-content: center;
+}
+
+main>div>div>img#img-logo {
+	animation: img_animation 5s;
+}
+
+@keyframes img_animation {
+	0% {
+		opacity: 0.2;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+/////estilos para el archivo Videos.html
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+#ln{
+	background: #0e778a;
+	box-shadow: inset 2px 2px 2px black;
+	border-bottom: 1.8px solid #d7d7d7ce;
+	border-right: 1.8px solid #d7d7d7ce;
+}
+
+#ln-des{
+	background: #0e778a;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	box-shadow: inset 2px 2px 2px #d7d7d7ce;
+}
+
+.ln-ant::before{
+	display: block;
+	width: 7px;
+	height: 7px;
+	content: "";
+	border-bottom: 2px solid white;
+	border-left: 2px solid white;
+	rotate: 45deg;
+}
+
+.ln-sig::before{
+	display: block;
+	width: 7px;
+	height: 7px;
+	content: "";
+	border-top: 2px solid white;
+	border-right: 2px solid white;
+	rotate: 45deg;
+}
+
+main>div#paginas {
+	width: 100%;
+}
+
+main>div#paginas>div.indice_de_paginas_de_videos {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	column-gap: 8px;
+}
+
+main>div#paginas>div.indice_de_paginas_de_videos>a {
+	color: white;
+	text-decoration: none;
+	width: 32px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main>div#paginas>div.indice_de_paginas_de_videos>a>p {
+	font-size: 14px;
+	text-align: center;
+}
+
+main>div#paginas>div.indice_de_paginas_de_videos>#ln-des:hover {
+	transform: scale(1.05);
+}
+
+main>#contenedor_del_menu_de_videos {
+	margin: 1%;
+	padding: 0;
+	width: auto;
+	
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 1%;
+	flex-wrap: wrap;
+	place-items: center;
+    justify-content: center;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form {
+	width: 29%;
+	position: relative;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button {
+	width: 100%;
+	background: transparent;
+	border: none;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button:hover {
+	transform: scale(1.025);
+	cursor: pointer;
+	filter: drop-shadow(2px 2px 1px var(--color-ui));
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button {
+	color: whitesmoke;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>.nombre_video {
+	margin-block-end: 4%;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>div.clip-miniatura {
+	width: 100%;
+}
+
+main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>div.clip-miniatura>img {
+	width: 100%;
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+///// Estilos para la pagina de watch.html
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+span>#Download {
+	transform: rotate(90deg);
+}
+
+main>iframe {
+	max-width: 90%;
+	min-height: 676;
+}
+
+main>h2 {
+	margin-block: 2%;
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+/////estilos para el archivo Codigos.html
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+main>section {
+	margin: 1%;
+	padding: 0;
+}
+
+main>section>div {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 10px;
+
+}
+
+main>section>div>div {
+	display: grid;
+	justify-items: center;
+	gap: 10px;
+}
+
+main>section>div>div>img {
+	width: 90%;
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+/////estilos para el archivo footer.php
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+footer {
+	box-shadow: 0 10px 0px 0 var(--background-page), 0 -3px 3px black;
+}
+
+footer>section {
+	margin: 10px;
+	margin-inline: 30px;/* 
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;*/
+}
+
+footer>section>p{
+    margin: 3%;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center
+}
+
+footer>section>p::after{
+    content: "";
+    border-top: 2px solid white;
+    width: 50%;
+    display: block;
+    animation: footer-animation infinite 10s;
+    transform-origin: left top;
+}
+
+@keyframes footer-animation {
+    0%{
+        width: 0%;
+        transform: translate(50%);
+    }
+    20%{
+        width: 100%;
+        transform: translate(0%);
+    }
+    40%{
+        width: 50%;
+        transform: translate(50%);
+    }
+    60%{
+        width: 100%;
+        transform: translate(0%);
+    }
+    80%{
+        width: 50%;
+        transform: translate(0%);
+    }
+    100%{
+        width: 0%;
+        transform: translate(50%);
+    }
+}
+
+footer>section>p>span>a {
+	color: white;
+	text-decoration: none;
+	font-weight: 900;
+}
+
+footer>section>p>span.bold-text-name {
+	font-weight: 900;
+}
+
+footer>section>p.contactos-de-suger {
+	padding-block-end: 20px;
+}
+
+.share {
+}
+
+.share>a {
+	color: white;
+	text-decoration: none;
+
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////
+/////estilos parea la pagina de genrador de apr y apy
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+.contenedor-tablas {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	margin-block-end: 1%;
+	width: 25%;
+	height: 20px;
+    gap: 30px;
+}
+
+.fomrgenerador {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+    margin-block-end: 2%;
+}
+
+.tabla-de-calculos {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+legend {
+	margin-inline-start: 10%;
+	background-color: var(--color-text);
+	padding-inline: 1%;
+	border-radius: 10px;
+}
+
+.tabla {
+	width: 100%;
+}

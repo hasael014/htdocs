@@ -5,19 +5,19 @@
     $name_pages = $_GET['name'];
 
     if ($name_pages != ""){
-        if($name_pages == "Watch"){
+        /*if($name_pages == "Watch"){
             
         include_once "$name_pages.php";
 
         include_once "footer.php";
         }
-        else{
+        else{*/
 
 	    include_once "header.php";
         
         include_once "$name_pages.php";
 
-        include_once "footer.php";}
+        include_once "footer.php";/*}*/
     }
     else {
         echo "<script>window.location.replace('/Inicio')</script>";
