@@ -5,7 +5,7 @@ $n = ($ab * 15)-15;
 $pagvisible = ($ab * 15);
 
 
-$API_key    = 'AIzaSyAYrxD6UXAu7WZ_rId82ZflD_hAtzZQHJI';
+//$API_key    = 'AIzaSyAYrxD6UXAu7WZ_rId82ZflD_hAtzZQHJI';
 $channelID  = /*'UClScZp72JcfbCce-xdlsyuA'*/ 'UCzR07E8NQU-ZV9hAsHLfExQ';
 $maxResults = 100;
 
